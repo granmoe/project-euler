@@ -35,4 +35,26 @@ end
 
 print(sum) -- 233168
 
--- TODO: Solution with a custom iter http://lua-users.org/wiki/RangeIterator
+-- Using a custom iterator
+function multiples (max, predicate)
+  local i = 0
+  return function ()
+    while i < max do
+      i = i + 1
+      if predicate(i) then
+        return i
+      end
+    end
+  end
+end
+
+function isValid (num)
+  return num % 3 == 0 or num % 5 == 0
+end
+
+sum = 0
+for multiple in multiples(999, isValid) do
+  sum = sum + multiple
+end
+
+print(sum) -- 233168
