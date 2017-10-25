@@ -4,4 +4,4 @@ I'm using this to document my work on the [Project Euler](https://projecteuler.n
 
 # Languages Used
 
-JavaScript, Elm, Haskell, Python, Lua, C#, maybe ML
+JavaScript, Elm, Haskell, Python, Lua, C#, Scala
